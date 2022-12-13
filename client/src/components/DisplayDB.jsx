@@ -9,7 +9,7 @@ const DisplayDB = () => {
         axios.get(`${process.env.REACT_APP_HOST}/api/jobs`).then((response) => {
           setJobsList(response.data)
         })
-    }, [])
+    }, [jobsList])
 
     const data = jobsList.map((entry, index) =>{
         return (
